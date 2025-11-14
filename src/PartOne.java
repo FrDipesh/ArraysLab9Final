@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class PartOne {
     public static void main(String[] args) {
@@ -6,6 +7,7 @@ public class PartOne {
         Random random = new Random();
         int total = 0;
         int average;
+        Scanner scan = new Scanner(System.in);
 
         for (int i = 0; i < dataPoints.length; i++){
             dataPoints[i] = random.nextInt(100) + 1;
@@ -19,7 +21,7 @@ public class PartOne {
             System.out.print(dataPoints[k] +" | ");
         }
 
-        //Sum of all the elements in dataPoints
+        //Calculation
         for (int j = 0; j < dataPoints.length; j++){
             total += dataPoints [j];
             //Max value
@@ -35,9 +37,19 @@ public class PartOne {
 
         System.out.println("\nTotal: " + total);
         System.out.println("\nAverage: " + average);
-        System.out.print("\nMax value: " + max);
-        System.out.print("\nMin value: " + min);
+        System.out.println("Max value: " + max);
+        System.out.println("Min value: " + min);
 
+        //Part 2
+        int userPick = InputHelper.getRangedInt(scan,"\nPick an integer value between 1 and 100",1,100);
+        System.out.println(userPick);
+        for (int k = 0; k < dataPoints.length; k++){
+            if (dataPoints[k] == userPick) {
+                System.out.println(userPick);
+                break;
+            }
+            System.out.print(dataPoints[k] +" | ");
+        }
     }
 
 }
