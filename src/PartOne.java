@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class PartOne {
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
 
@@ -21,6 +20,7 @@ public class PartOne {
             }
         }
         System.out.println("\n");
+
 
         int sum = 0;
         int min = dataPoints[0];
@@ -78,9 +78,9 @@ public class PartOne {
         }
 
         if (position == -1) {
-            System.out.println("The value " + searchValue2 + " was NOT found in the array.");
+            System.out.println("The value: " + searchValue2 + " was NOT found in the array.");
         } else {
-            System.out.println("The value " + searchValue2 + " was found at array index " + position + ".");
+            System.out.println("The value: " + searchValue2 + " was found at array index " + position + ".");
         }
 
         scan.close();
